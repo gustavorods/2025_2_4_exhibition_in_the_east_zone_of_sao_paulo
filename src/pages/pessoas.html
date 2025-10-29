@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setor 1: Pinturas Abstratas - Exposição de Arte Moderna</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/setor.css">
+</head>
+<body>
+    <!-- Menu Hamburger -->
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    <!-- Menu de Navegação Desktop -->
+    <nav id="nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li>
+                <a href="#setores">Setores</a>
+                <ul class="submenu">
+                    <li><a href="./jovens.html">Setor 1: Jovens</a></li>
+                    <li><a href="./pessoas.html">Setor 2: Pessoas</a></li>
+                    <li><a href="./casas.html">Setor 3: Casas</a></li>
+                    <li><a href="./lgbt.html">Setor 4: LGBT</a></li>
+                    <li><a href="./comercios.html">Setor 5: Comercios</a></li>
+                    <li><a href="./igrejas_templos_religosos.html">Setor 6: Igrejas e Templos Religiosos</a></li>
+                    <li><a href="./parques.html">Setor 7: Parques e Praças</a></li>
+                </ul>
+            </li>
+            <li><a href="./index.html">Sobre Nós</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Menu Overlay Mobile -->
+    <div class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li>
+                <span id="setoresMobile" style="color: var(--light-gray); font-size: 1.5rem; cursor: pointer;">Setores</span>
+                <ul class="submenu-mobile" id="submenuMobile">
+                    <li><a href="./jovens.html">Setor 1: Jovens</a></li>
+                    <li><a href="./pessoas.html">Setor 2: Pessoas</a></li>
+                    <li><a href="./casas.html">Setor 3: Casas</a></li>
+                    <li><a href="./lgbt.html">Setor 4: LGBT</a></li>
+                    <li><a href="./comercios.html">Setor 5: Comercios</a></li>
+                    <li><a href="./igrejas_templos_religosos.html">Setor 6: Igrejas e Templos Religiosos</a></li>
+                    <li><a href="./parques.html">Setor 7: Parques e Praças</a></li>
+                </ul>
+            </li>
+            <li><a href="./sobre.html">Sobre Nós</a></li>
+        </ul>
+    </div>
+
+    <!-- Cabeçalho do Setor -->
+    <header class="sector-header">
+        <h1>Setor 2: Pessoas</h1>
+        <p>Este espaço celebra a essência humana em sua pluralidade. As obras aqui apresentadas revelam gestos, expressões e trajetórias de pessoas comuns, mas extraordinárias em suas vivências. São fragmentos de vidas que se cruzam — olhares, sentimentos e experiências que constroem a identidade coletiva e mostram a beleza presente em cada existência.</p>
+    </header>
+    
+    <!-- Seção de Artistas -->
+    <section class="section">
+        <h3>Artistas Participantes</h3>
+        <ul>
+            <li>Ester</li>
+            <li>karinne</li>
+            <li>Gabrielly</li>
+            <li>Maria</li>
+            <li>Jovana</li>
+            <li>Leticia</li>
+        </ul>
+    </section>
+    
+    <!-- Carrossel de Fotos -->
+    <section class="section">
+        <h3>Obras em Destaque</h3>
+        <div class="carousel" id="carousel1">
+            <div class="carousel-container"></div>
+            <div class="carousel-controls">
+                <button id="prev1">&larr;</button>
+                <button id="next1">&rarr;</button>
+            </div>
+            <div class="carousel-indicators"></div>
+        </div>
+    </section>
+    
+    <!-- Modal para exibir imagem ampliada -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+        </div>
+    </div>
+    
+    <footer>
+        <p>Projeto desenvolvido por Gustavo Rodrigues, estudante do 3º ano de Análise e Desenvolvimento de Sistemas (AMS), em parceria com a turma e orientação do professor Rafael.</p>
+    </footer>
+    
+    <script src="../js/pessoas.js"></script>
+</body>
+</html>

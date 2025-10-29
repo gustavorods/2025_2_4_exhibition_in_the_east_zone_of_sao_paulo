@@ -1,0 +1,303 @@
+:root {
+            --primary-gray: #333;
+            --secondary-gray: #666;
+            --light-gray: #f5f5f5;
+            --medium-gray: #ccc;
+            --dark-gray: #222;
+            --accent-gray: #888;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-gray);
+            color: var(--primary-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Menu Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1001;
+        }
+        
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background: var(--light-gray);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        .hamburger.active div:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active div:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active div:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        nav {
+            background: var(--dark-gray);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px var(--shadow);
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+            position: relative;
+        }
+        
+        nav a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--accent-gray);
+        }
+        
+        /* Submenu para Setores */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--dark-gray);
+            min-width: 200px;
+            box-shadow: 0 4px 8px var(--shadow);
+            border-radius: 4px;
+        }
+        
+        .submenu li {
+            margin: 0;
+        }
+        
+        .submenu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        
+        .submenu a:hover {
+            background: var(--secondary-gray);
+        }
+        
+        nav li:hover .submenu {
+            display: block;
+        }
+        
+        /* Menu Mobile */
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .menu-overlay.active {
+            display: flex;
+        }
+        
+        .menu-overlay ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .menu-overlay li {
+            margin: 1rem 0;
+        }
+        
+        .menu-overlay a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .menu-overlay a:hover {
+            color: var(--accent-gray);
+        }
+        
+        .submenu-mobile {
+            display: none;
+            margin-top: 1rem;
+        }
+        
+        .submenu-mobile.active {
+            display: block;
+        }
+        
+        .submenu-mobile li {
+            margin: 0.5rem 0;
+        }
+        
+        .submenu-mobile a {
+            font-size: 1.2rem;
+        }
+        
+        /* Hall de Entrada */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-gray) 0%, var(--secondary-gray) 100%);
+            color: var(--light-gray);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin: 0.5rem 0 2rem;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1.2s ease-out;
+        }
+        
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 2s ease-out;
+        }
+        
+        .hero-button {
+            background: var(--light-gray);
+            color: var(--primary-gray);
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .hero-button:hover {
+            background: var(--medium-gray);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px var(--shadow);
+        }
+        
+        footer {
+            background: var(--dark-gray);
+            color: var(--light-gray);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposição de Arte Moderna</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <!-- Menu Hamburger -->
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    <!-- Menu de Navegação Desktop -->
+    <nav id="nav">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li>
+                <a href="#setores">Setores</a>
+                <ul class="submenu">
+                    <li><a href="./src/pages/jovens.html">Setor 1: Jovens</a></li>
+                    <li><a href="./src/pages/pessoas.html">Setor 2: Pessoas</a></li>
+                    <li><a href="./src/pages/casas.html">Setor 3: Casas</a></li>
+                    <li><a href="./src/pages/lgbt.html">Setor 4: LGBT</a></li>
+                    <li><a href="./src/pages/comercios.html">Setor 5: Comercios</a></li>
+                    <li><a href="./src/pages/igrejas_templos_religosos.html">Setor 6: Igrejas e Templos Religiosos</a></li>
+                    <li><a href="./src/pages/parques.html">Setor 7: Parques e Praças</a></li>
+                </ul>
+            </li>
+            <li><a href="./index.html">Sobre Nós</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Menu Overlay Mobile -->
+    <div class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li>
+                <span id="setoresMobile" style="color: var(--light-gray); font-size: 1.5rem; cursor: pointer;">Setores</span>
+                <ul class="submenu-mobile" id="submenuMobile">
+                    <li><a href="./src/pages/jovens.html">Setor 1: Jovens</a></li>
+                    <li><a href="./src/pages/pessoas.html">Setor 2: Pessoas</a></li>
+                    <li><a href="./src/pages/casas.html">Setor 3: Casas</a></li>
+                    <li><a href="./src/pages/lgbt.html">Setor 4: LGBT</a></li>
+                    <li><a href="./src/pages/comercios.html">Setor 5: Comercios</a></li>
+                    <li><a href="./src/pages/igrejas_templos_religosos.html">Setor 6: Igrejas e Templos Religiosos</a></li>
+                    <li><a href="./src/pages/parques.html">Setor 7: Parques e Praças</a></li>
+                </ul>
+            </li>
+            <li><a href="./src/pages/sobre.html">Sobre Nós</a></li>
+        </ul>
+    </div>
+    
+    <!-- Hall de Entrada -->
+    <section id="home" class="hero">
+        <h1>Leste em Cena: Arte da Quebrada</h1>
+        <h2>Expressões da periferia que contam histórias, resistem e inspiram.</h2>
+        <p>A Zona Leste pulsa arte, cor e sentimento. Nesta exposição, reunimos artes que transformam o cotidiano da quebrada em poesia visual — um reflexo de lutas, sonhos e identidades. “Leste em Cena” é mais do que uma mostra: é um convite para enxergar a beleza onde muitos só veem concreto, e celebrar a força criativa que nasce nas ruas, nos muros e nos corações da periferia paulistana.</p>
+        <div class="hero-buttons">
+            <a href="./src/pages/jovens.html"  class="hero-button">Setor 1: Jovens</a>
+            <a href="./src/pages/pessoas.html" class="hero-button">Setor 2: Pessoas</a>
+            <a href="./src/pages/casas.html" class="hero-button">Setor 3: Casas</a>
+            <a href="./src/pages/lgbt.html" class="hero-button">Setor 4: LGBT</a>
+            <a href="./src/pages/comercios.html" class="hero-button">Setor 5: Comercios</a>
+            <a href="./src/pages/igrejas_templos_religosos.html" class="hero-button">Setor 6: Igrejas e Templos Religiosos</a>
+            <a href="./src/pages/parques.html" class="hero-button">Setor 7: Parques e Praças</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Projeto desenvolvido por Gustavo Rodrigues, estudante do 3º ano de Análise e Desenvolvimento de Sistemas (AMS), em parceria com a turma e orientação do professor Rafael.</p>
+    </footer>
+    
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
