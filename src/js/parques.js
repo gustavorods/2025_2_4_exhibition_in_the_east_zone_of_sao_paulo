@@ -11,7 +11,7 @@ const carouselData = {
         { src: '../img/parques/8.jpg', alt: 'Foto 8', caption: '"Retorno às Origens" - Gustavo de Souza, 08/06/2025 – Parque da Água Branca' },
         { src: '../img/parques/9.jpg', alt: 'Foto 9', caption: '"Casa de Barro" - Jônatas Frinhani, 08/06/2025 – Parque da Água Branca' },
         { src: '../img/parques/10.jpg', alt: 'Foto 10', caption: '"Espelho d\'Água no Coração da Floresta" - Gustavo de Souza, 08/06/2025 – Parque da Água Branca' },
-        { src: '../img/parques/11.jpg', alt: 'Foto 11', caption: '"T na Árvore" - Autor não especificado, 08/06/2025 – Parque da Água Branca' },
+        { src: '../img/parques/11.jpg', alt: 'Foto 11', caption: '"T na Árvore" - Autor não especificado, 08/06/2025 – Parque da Água Branca ' },
     ]
 };
 
