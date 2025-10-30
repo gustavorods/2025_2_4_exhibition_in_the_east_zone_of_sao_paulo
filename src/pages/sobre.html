@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Exposição de Arte Moderna</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gray: #333;
+            --secondary-gray: #666;
+            --light-gray: #f5f5f5;
+            --medium-gray: #ccc;
+            --dark-gray: #222;
+            --accent-gray: #888;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-gray);
+            color: var(--primary-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Menu Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1001;
+        }
+        
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background: var(--light-gray);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        .hamburger.active div:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active div:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active div:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        
+        nav {
+            background: var(--dark-gray);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px var(--shadow);
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+            position: relative;
+        }
+        
+        nav a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--accent-gray);
+        }
+        
+        /* Submenu para Setores */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--dark-gray);
+            min-width: 200px;
+            box-shadow: 0 4px 8px var(--shadow);
+            border-radius: 4px;
+        }
+        
+        .submenu li {
+            margin: 0;
+        }
+        
+        .submenu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        
+        .submenu a:hover {
+            background: var(--secondary-gray);
+        }
+        
+        nav li:hover .submenu {
+            display: block;
+        }
+        
+        /* Menu Mobile */
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .menu-overlay.active {
+            display: flex;
+        }
+        
+        .menu-overlay ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        .menu-overlay li {
+            margin: 1rem 0;
+        }
+        
+        .menu-overlay a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .menu-overlay a:hover {
+            color: var(--accent-gray);
+        }
+        
+        .submenu-mobile {
+            display: none;
+            margin-top: 1rem;
+        }
+        
+        .submenu-mobile.active {
+            display: block;
+        }
+        
+        .submenu-mobile li {
+            margin: 0.5rem 0;
+        }
+        
+        .submenu-mobile a {
+            font-size: 1.2rem;
+        }
+        
+        /* Conteúdo da Página */
+        .about-header {
+            background: linear-gradient(135deg, var(--primary-gray) 0%, var(--secondary-gray) 100%);
+            color: var(--light-gray);
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .about-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .section {
+            margin: 3rem auto;
+            max-width: 1100px;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px var(--shadow);
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .section p {
+            font-size: 1.1rem;
+            color: var(--secondary-gray);
+            margin-bottom: 2rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .social-links a {
+            color: var(--primary-gray);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-gray);
+        }
+        
+        footer {
+            background: var(--dark-gray);
+            color: var(--light-gray);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .about-header h1 {
+                font-size: 2rem;
+            }
+            .section {
+                margin: 2rem 1rem;
+                padding: 1.5rem;
+            }
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+     <!-- Menu Hamburger -->
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    <!-- Menu de Navegação Desktop -->
+    <nav id="nav">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li>
+                <a href="#setores">Setores</a>
+                <ul class="submenu">
+                    <li><a href="./jovens.html">Setor 1: Jovens</a></li>
+                    <li><a href="./pessoas.html">Setor 2: Pessoas</a></li>
+                    <li><a href="./casas.html">Setor 3: Casas</a></li>
+                    <li><a href="./lgbt.html">Setor 4: LGBT</a></li>
+                    <li><a href="./comercios.html">Setor 5: Comercios</a></li>
+                    <li><a href="./igrejas_templos_religosos.html">Setor 6: Igrejas e Templos Religiosos</a></li>
+                    <li><a href="./parques.html">Setor 7: Parques e Praças</a></li>
+
+                </ul>
+            </li>
+            <li><a href="./sobre.html">Sobre Nós</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Menu Overlay Mobile -->
+    <div class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li>
+                <span id="setoresMobile" style="color: var(--light-gray); font-size: 1.5rem; cursor: pointer;">Setores</span>
+                <ul class="submenu-mobile" id="submenuMobile">
+                    <li><a href="./jovens.html">Setor 1: Jovens</a></li>
+                    <li><a href="./pessoas.html">Setor 2: Pessoas</a></li>
+                    <li><a href="./casas.html">Setor 3: Casas</a></li>
+                    <li><a href="./lgbt.html">Setor 4: LGBT</a></li>
+                    <li><a href="./comercios.html">Setor 5: Comercios</a></li>
+                    <li><a href="./igrejas_templos_religosos.html">Setor 6: Igrejas e Templos Religiosos</a></li>
+                    <li><a href="./parques.html">Setor 7: Parques e Praças</a></li>
+
+                </ul>
+            </li>
+            <li><a href="./sobre.html">Sobre Nós</a></li>
+        </ul>
+    </div>
+    
+    <!-- Cabeçalho Sobre Nós -->
+    <header class="about-header">
+        <h1>Sobre Nós</h1>
+    </header>
+    
+    <!-- Seção de Texto -->
+    <section class="section">
+        <p>
+            A <strong>Exposição Zona Leste de São Paulo</strong> é um projeto desenvolvido por 
+            <strong>Gustavo Rodrigues</strong>, estudante do 3º ano de <em>Análise e Desenvolvimento de Sistemas</em> 
+            da <strong>ETEC Zona Leste</strong>, com a colaboração de seus colegas de turma e orientação da professora Rafael.
+        </p>
+        <p>
+            O projeto nasceu com o propósito de unir arte, cultura e tecnologia, dando visibilidade à diversidade 
+            e às histórias que formam a identidade da Zona Leste. Cada setor da exposição — como juventude, pessoas, casas, 
+            comércios, templos religiosos, temas LGBT e parques — representa um olhar único sobre a vida, a cidade e 
+            a expressão artística de quem vive nela.
+        </p>
+        <p>
+            Mais do que um trabalho acadêmico, esta exposição é uma celebração da criatividade, da coletividade 
+            e da força cultural da região.
+        </p>
+        <p>
+            Meu nome é <strong>Gustavo Rodrigues</strong>, sou estudante e desenvolvedor full stack apaixonado 
+            por tecnologia, design e projetos que conectam pessoas. Criei este site com dedicação para mostrar 
+            o poder da arte e da expressão digital.
+        </p>
+        <p>
+            Se você se interessou pelo meu trabalho ou quer trocar ideias sobre tecnologia e criação, 
+            pode me chamar pelas redes sociais — será um prazer conversar e compartilhar experiências.
+        </p>
+    
+        <div class="social-links">
+            <a href="https://github.com/gustavorods" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/gustavo-rodrigues-4887b7288/" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>feito em colaboração com o professor Rafael da etec zona leste</p>
+    </footer>
+    
+    <script>
+        // Toggle Hamburger Menu
+        const hamburger = document.getElementById('hamburger');
+        const menuOverlay = document.getElementById('menuOverlay');
+        const setoresMobile = document.getElementById('setoresMobile');
+        const submenuMobile = document.getElementById('submenuMobile');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+        });
+        
+        setoresMobile.addEventListener('click', () => {
+            submenuMobile.classList.toggle('active');
+        });
+        
+        // Fechar menu ao clicar em link
+        menuOverlay.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                hamburger.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                submenuMobile.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
