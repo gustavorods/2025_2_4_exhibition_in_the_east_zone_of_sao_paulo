@@ -7,7 +7,7 @@
                 { src: '../img/jovens/Fantasia.jpg', alt: 'Foto 4', caption: '"Fantasia" - Miguel Yudi – Vila Curuçá Velha –14/06/2025' },
                 { src: '../img/jovens/Serenidade.jpg', alt: 'Foto 5', caption: '"Serenidade" - Miguel Yudi – A.E. Carvalho – 12/06/2025' },
                 { src: '../img/jovens/Inercia.jpg', alt: 'Foto 6', caption: '"Inércia" - Miguel Yudi – A.E. Carvalho – 12/06/2025' },
-                { src: '../img/jovens/Esperanca.png', alt: 'Foto 7', caption: '"Esperança" - Miguel Yudi – Penha – 15/06/2025' },
+                { src: '../img/jovens/Esperanca.jpg', alt: 'Foto 7', caption: '"Esperança" - Miguel Yudi – Penha – 15/06/2025' },
                 { src: '../img/jovens/Escapismo.jpg', alt: 'Foto 8', caption: '"Escapismo" - Emily Cristina – A.E. Carvalho – 09/06/2025' },
                 { src: '../img/jovens/Memorias.jpg', alt: 'Foto 9', caption: '"Memórias" - Lucas Bonfim – A.E. Carvalho – 12/06/2025' },
                 { src: '../img/jovens/Reflexao.jpg', alt: 'Foto 10', caption: '"Reflexão" - Giovanna Andrade – Penha – 14/06/2025' },
