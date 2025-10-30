@@ -338,6 +338,7 @@
             display: flex;
             justify-content: center;
             margin-top: 1.5rem;
+            padding: 10px;
         }
         
         .indicator {

@@ -9,7 +9,7 @@ const carouselData = {
         { src: '../img/lgbt/6.png', alt: 'Foto 6', caption: '"Construção da Memória" - Beatriz Silva, 05/06/2025 – Etec Zona Leste' },
         { src: '../img/lgbt/7.png', alt: 'Foto 7', caption: '"Afirmação de Cores" - Neluma Siqueira, 20/06/2025 – Etec Zona Leste' },
         { src: '../img/lgbt/8.png', alt: 'Foto 8', caption: '"Ressoando o Interior" - Sakiri Moon, 12/06/2025 – Jardim Robru' },
-        { src: '../img/lgbt/9.png', alt: 'Foto 9', caption: '"Absorvendo pra Si" - João Pedro Bispo, 20/05/2025 – Etec Zona Leste' },
+        { src: '../img/lgbt/9.png', alt: 'Foto 9', caption: '"Absorvendo pra Si" - João Pedro Bispo, 20/05/2025 – Paulista' },
         { src: '../img/lgbt/10.png', alt: 'Foto 10', caption: '"Gargantilha Nova, ou Nova Garganta?" - Neluma Siqueira, 22/06/2025 – Carrão' },
     ]
 };

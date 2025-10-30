@@ -1,18 +1,18 @@
 // Dados dos slides para o carrossel
-        const carouselData = {
-            carousel1: [
-                { src: '../img/pessoas/catedral.png', alt: 'Foto 1', caption: '"Catedral da Sé" - Gabrielly Nascimento, 10/06/2025, Catedral da sé' },
-                { src: '../img/pessoas/homens_no_bar.png', alt: 'Foto 2', caption: '"Homens no bar" - Homens conversando, bebendo e cantando no bar.' },
-                { src: '../img/pessoas/centro.png', alt: 'Foto 3', caption: '"Centro de são paulo" - Maria Monteiro, 23/02/2025, Anhangabaú' },
-                { src: '../img/pessoas/adoracao.png', alt: 'Foto 4', caption: '"Adoração" - Ester Rodrigues, 05/06/2025, Itaquera' },
-                { src: '../img/pessoas/quermesse.png', alt: 'Foto 5', caption: '"Quermesse" - Jovana Oliveira, 14/06/2025, PRAÇA SÍLVIO ROMERO tatuapé' },
-                { src: '../img/pessoas/espetaculo.png', alt: 'Foto 6', caption: '"Espetáculo de dança" - jovana oliveira, 17/01/2025, Anhangabaú ' },
-                { src: '../img/pessoas/parque.png', alt: 'Foto 7', caption: '"Parque de diversões" - karinne angelo, 12/01/2025, shopping aricanduva' },
-                { src: '../img/pessoas/escada.png', alt: 'Foto 8', caption: '"Escada Rolante" - gabrielly nascimento, 14/06/2025, metrô artur alvim' },
-                { src: '../img/pessoas/feira.png', alt: 'Foto 9', caption: '"Feira" - maria monteiro, 15/06/2025, jardim helena' },
-                { src: '../img/pessoas/mercadinho.png', alt: 'Foto 10', caption: '"Mercadinho" - leticia guanaes, 15/06/2025, jardim helena' },
-            ]
-        };
+const carouselData = {
+    carousel1: [
+        { src: '../img/pessoas/catedral.png', alt: 'Foto 1', caption: '"Catedral da Sé" - Gabrielly Nascimento, 10/06/2025, Catedral da Sé.' },
+        { src: '../img/pessoas/homens_no_bar.png', alt: 'Foto 2', caption: '"Homens no Bar" - Letícia Guanaes, 10/06/2025, Arthur Alvin.' },
+        { src: '../img/pessoas/centro.png', alt: 'Foto 3', caption: '"Centro de São Paulo" - Maria Monteiro, 23/02/2025, Anhangabaú.' },
+        { src: '../img/pessoas/adoracao.png', alt: 'Foto 4', caption: '"Adoração" - Ester Rodrigues, 05/06/2025, Itaquera.' },
+        { src: '../img/pessoas/quermesse.png', alt: 'Foto 5', caption: '"Quermesse" - Jovana Oliveira, 14/06/2025, Praça Sílvio Romero, Tatuapé.' },
+        { src: '../img/pessoas/espetaculo.png', alt: 'Foto 6', caption: '"Espetáculo de Dança" - Jovana Oliveira, 17/01/2025, Anhangabaú.' },
+        { src: '../img/pessoas/parque.png', alt: 'Foto 7', caption: '"Parque de Diversões" - Karinne Angelo, 12/01/2025, Shopping Aricanduva.' },
+        { src: '../img/pessoas/escada.png', alt: 'Foto 8', caption: '"Escada Rolante" - Gabrielly Nascimento, 14/06/2025, Metrô Artur Alvim.' },
+        { src: '../img/pessoas/feira.png', alt: 'Foto 9', caption: '"Feira" - Maria Monteiro, 15/06/2025, Jardim Helena.' },
+        { src: '../img/pessoas/mercadinho.png', alt: 'Foto 10', caption: '"Mercadinho" - Leticia Guanaes, 15/06/2025, Jardim Helena.' },
+    ]
+};
 
         // Classe Carousel aprimorada para renderizar slides dinamicamente
         class Carousel {

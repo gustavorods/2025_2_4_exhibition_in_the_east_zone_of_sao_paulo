@@ -3,7 +3,7 @@
             carousel1: [
                 { src: '../img/templos/1.png', alt: 'Foto 1', caption: '"Dízimo" - Vitor Daisuke, 09/06/2025' },
                 { src: '../img/templos/2.png', alt: 'Foto 2', caption: '"Fé é pra Todos" - Gustavo Rodrigues, 07/06/2025' },
-                { src: '../img/templos/3.png', alt: 'Foto 3', caption: '"Coroa de Deus" - Erik Lima, 14/05/2025' },
+                { src: '../img/templos/3.png', alt: 'Foto 3', caption: '"Coroa de Deus" - Erick Lima, 14/05/2025' },
                 { src: '../img/templos/4.png', alt: 'Foto 4', caption: '"Cruz nos Céus" - Hernandes Arthur, 30/04/2025' },
                 { src: '../img/templos/5.png', alt: 'Foto 5', caption: '"Tradição" - Vitor Daisuke, 09/06/2025' },
                 { src: '../img/templos/6.png', alt: 'Foto 6', caption: '"Muros de Fé" - Rafael Lopes, 10/06/2025' },
